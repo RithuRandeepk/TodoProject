@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Title</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+
+</head>
+
+<body>
+    {% if messages %}
+    
+    {% for message in messages %}
+
+    
+    
+    {% if message.level == DEFAULT_MESSAGE_LEVELS.SUCCESS %}
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <strong>{{ message }}</strong> 
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+    {% endif %}
+
+
+
+    
+    {% endfor %}
+    
+    {% endif %}
+    
+
+    
+    <div class="container">
+        <div class="row">
+            <div class="col-2"></div>
+            <div class="col-8">
+                <table class="table table-striped table-success">
+                    <tr>
+                        <th>TASKNAME</th>
+                        <th>CRAETED DATE</th>
+                        <th>STATUS</th>
+                    </tr>
+
+                    {% for i in form %}
+                    <tr>
+                        <td>{{i.task_name}}</td>
+                        <td>{{i.created_date}}</td>
+                        <td>{{i.status}}</td>
+                        <td>
+                            <a href="todoedit/{{i.id}}" class="btn btn-info">EDIT</a>
+                            <a href="tododelete/{{i.id}}" class="btn btn-danger">DELETE</a>
+                        </td>
+
+                    </tr>
+
+                   
+
+                    {% endfor %}
+
+                </table>
+            </div>
+
+            <div class="col-2"></div>
+        </div>
+    </div>
+</body>
+
+</html>

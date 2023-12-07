@@ -1,0 +1,84 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Sofia">
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+    <script src="https://kit.fontawesome.com/99aa11eb92.js" crossorigin="anonymous"></script>
+    <script src="{% static 'js/pscript.js' %}"></script>
+    
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    
+   <!-- <link rel -->
+   
+</head>
+<body>
+    <div class="heading">
+        <h2>WELCOME {{request.user}}</h2>
+        <!-- <a href="{% url 'signup' %}">SIGNUp</a><br>
+        <a href="{% url 'signin' %}">SIGNIN</a><br>
+        <a href="{% url 'signout' %}">SIGNOUT</a><br>
+        <a href="{% url 'todolist' %}">Todolist</a><br>
+         <a href="{% url 'todocreate' %}">TODOCReate</a> -->
+       
+     
+
+    </div>
+    <div class="main-container">
+        <div class="navbar-container">
+            <div class="title">
+                <h1>MY TODO's</h1>
+            </div>
+            <div class="tabs">
+                
+                <button id="signup" onclick="loadContent('{% url 'signup' %}')">SIGNUp</button>
+                <button id="sigin" onclick="loadContent('{% url 'signin' %}')">Login</button>
+                <button id="todocreate" onclick="loadContent('{% url 'todocreate' %}')">Add ToDo</button>
+                <button  id="todolist" onclick="loadContent('{% url 'todolist' %}')">My ToDo's</button>
+                <button id="signout" onclick="loadContent('{% url 'signout' %}')">SIGNOUT</button>
+
+            </div>
+          
+
+        </div>
+        <div class="tabcontents" id="tabcontents">
+
+        </div>
+        
+    <script>
+        function loadContent(url) {
+            // Use AJAX or fetch to load content from the specified URL
+            // For simplicity, let's use fetch in this example
+            fetch(url)
+                .then(response => response.text())
+                .then(data => {
+                    // Insert the loaded content into the tabcontents div
+                    document.getElementById('tabcontents').innerHTML = data;
+                })
+                .catch(error => console.error('Error:', error));
+        }
+
+        
+    
+
+
+    </script>
+
+
+ 
+    
+</body>
+</html>

@@ -1,0 +1,105 @@
+body {
+    background-image: url('/static/image/todo.jpg');
+    background-size: cover;  
+}
+.heading{
+    
+    /* position: fixed; */
+    margin-left: 100px;
+    height: 120px;
+}
+h2{
+    margin-top: 58px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: blueviolet;
+}
+h1{
+    margin-left: 20px;
+    margin-top: 250px;
+}
+.tabs{
+    margin-top: -221px;
+}
+.main-container {
+    display: grid;
+    grid-template-columns: 15% 1fr;
+    grid-gap: 10px;
+    height: 800px;
+    background-color: rgb(244, 255, 244);
+  }
+  
+  .navbar-container {
+    background-color: #f9f9f9;
+    margin-top: 250;
+  }
+  
+  .tabcontents {
+    background-color: #ccf;
+    margin: left 500px;
+    margin-top: 30px;
+  }
+
+  .navbar-container {
+    background-color: #f9f9f9;
+    display: grid;
+    grid-template-rows: 40% 60%;
+    grid-gap: 10px;
+  }
+
+  .tabs button {
+    margin-bottom: 10px;
+    width: 80%;
+    height: 70px;
+    padding-left: 20px;
+    border: none;
+    outline: none;
+    text-align: left;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  
+  .tabs button:hover {
+    background-color: #ddd;
+  }
+  
+  .tabs button.active {
+    background-color: #ccc;
+  }
+  
+  .button-content {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+  }
+  .tabs a {
+    text-align: center;
+    text-decoration: none; 
+    color: black
+  }
+  .tabs {
+    text-align: center; 
+  }
+
+  .today {
+    align-self: flex-start;
+    margin-left: 15px;
+    font-size: 17px;
+  }
+  .todos-display {
+    /* background-color: ; */
+    z-index: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    height: 85%;
+  }
+  
+  .todos-display li {
+    list-style-type: none;
+  }
+
+
+
+
+
+
+

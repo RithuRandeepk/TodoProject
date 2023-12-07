@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=na, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main-container">
+        <div class="navbar-container">
+            <div class="title">
+                <h1>MY TODO's</h1>
+              </div>
+              <div class="tabs">
+                
+                <button ><a href="{% url 'signup' %}">SIGNUp</a></button>
+                <button><a href="{% url 'signin' %}">Login</a></button>
+                <button><a href="{% url 'todocreate' %}">Add ToDo</a></button>
+                <button><a href="{% url 'todolist' %}">My ToDo's</a></button>
+                <button> <a href="{% url 'signout' %}">SIGNOUT</a></button>
+                
+              </div>
+              
+      </div>
+    
+
+    
+
+    
+</body>
+</html>
